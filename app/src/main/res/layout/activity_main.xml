@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Сканувати"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_scan"
+        android:layout_marginTop="16dp"
+        android:padding="10dp" />
+
+    <!-- Add "Save to CSV" button -->
+    <Button
+        android:id="@+id/button_save_to_csv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Зберегти в CSV" />
+
+    <!-- Add "Clear Database" button -->
+    <Button
+        android:id="@+id/button_clear_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_save_to_csv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Очистити базу данних" />
+
+    <!-- Add TableView to display database records -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_clear_database"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>
